@@ -10,6 +10,8 @@ Disclaimer: Please don't use the standards conversion feature for YouTube upload
 Just because this tool lets you convert 50i videos to 59.94p doesn't mean you should! Your 50i videos should stay at 50p, and your 59.94i videos at 59.94p unless you explicitly need to convert between standards.
 
 ## Credits
+- [MediaInfo](https://mediaarea.net/en/MediaInfo)
+- [MediaInfo.Wrapper](https://github.com/yartat/MP-MediaInfo): yartat
 - [FFmpeg](https://ffmpeg.org/)
 - FFmpegSource: Myrsloik, et al.
 - QTGMC by Vit, Dogway and real.finder, which leverages off:
@@ -22,5 +24,8 @@ Just because this tool lets you convert 50i videos to 59.94p doesn't mean you sh
   - Zs_RF_Shared: real.finder, et al.
 - [FFTW](http://www.fftw.org/)
 
+MediaInfo is licensed under the [MediaInfo(Lib) License](https://mediaarea.net/en/MediaInfo/License).
+MediaInfo.Wrapper is licensed under the [BSD License](https://opensource.org/license/bsd-3-clause/).
 FFmpeg, FFTW, and all included binaries necessary for QTGMC to function are licensed under [GPLv2](https://www.gnu.org/licenses/gpl-2.0.txt).
+
 Massive thanks go out to everyone mentioned, without whom this project would not have been possible!
