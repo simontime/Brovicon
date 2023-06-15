@@ -11,13 +11,13 @@ Disclaimer: Please don't use the standards conversion feature for YouTube upload
 - [FFmpeg](https://ffmpeg.org/)
 - FFmpegSource: Myrsloik, et al.
 - QTGMC by Vit, Dogway and real.finder, which leverages off:
--- DePan, DePanEstimate: Fizick, pinterf
--- FFT3DFilter: Fizick, martin53, pinterf
--- MaskTools2: pinterf, tp7, Manao, mg262, Kurosu
--- MVTools: Manao, Fizick, Tsp, TSchniede, SEt, cretindesalpes, pinterf
--- NNEDI3: tritical, jpsdr
--- RgTools: tp7, pinterf
--- Zs_RF_Shared: real.finder, et al.
+- - DePan, DePanEstimate: Fizick, pinterf
+- - FFT3DFilter: Fizick, martin53, pinterf
+- - MaskTools2: pinterf, tp7, Manao, mg262, Kurosu
+- - MVTools: Manao, Fizick, Tsp, TSchniede, SEt, cretindesalpes, pinterf
+- - NNEDI3: tritical, jpsdr
+- - RgTools: tp7, pinterf
+- - Zs_RF_Shared: real.finder, et al.
 - [FFTW](http://www.fftw.org/)
 
 FFmpeg, FFTW, and all included binaries necessary for QTGMC to function are licensed under [GPLv2](https://www.gnu.org/licenses/gpl-2.0.txt).
