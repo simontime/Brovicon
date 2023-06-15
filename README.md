@@ -5,7 +5,8 @@ My motivation to develop this tool stems from my intense hatred of major record 
 
 This tool takes any video file and preserves the original silky-smooth motion rate of 50/59.94 Hz, whilst also enabling you to convert the frame rate if needed, and can cleanly upscale the output to HD or 4K resolution (for YouTube, for example) without any nasty artefacts as produced by all the leading AI video upscaling tools.
 
-Disclaimer: Please don't use the standards conversion feature for YouTube uploads: 50i in should be 50p out - YouTube can display PAL (50p) video just fine. Just because this tool lets you convert 50i videos to 59.94p doesn't mean you should! Preserve your 50i videos at 50p, and your 59.94i videos at 59.94p unless you explicitly need to convert between standards.
+Disclaimer: Please don't use the standards conversion feature for YouTube uploads: 50i in should be 50p out - YouTube can display PAL (50p) video just fine.
+Just because this tool lets you convert 50i videos to 59.94p doesn't mean you should! Preserve your 50i videos at 50p, and your 59.94i videos at 59.94p unless you explicitly need to convert between standards.
 
 ## Credits
 - [FFmpeg](https://ffmpeg.org/)
