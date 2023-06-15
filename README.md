@@ -24,8 +24,4 @@ Just because this tool lets you convert 50i videos to 59.94p doesn't mean you sh
   - Zs_RF_Shared: real.finder, et al.
 - [FFTW](http://www.fftw.org/)
 
-MediaInfo is licensed under the [MediaInfo(Lib) License](https://mediaarea.net/en/MediaInfo/License).
-MediaInfo.Wrapper is licensed under the [BSD License](https://opensource.org/license/bsd-3-clause/).
-FFmpeg, FFTW, and all included binaries necessary for QTGMC to function are licensed under [GPLv2](https://www.gnu.org/licenses/gpl-2.0.txt).
-
-Massive thanks go out to everyone mentioned, without whom this project would not have been possible!
+Massive thanks go out to everyone mentioned above, without whom this project would not have been possible!
