@@ -85,7 +85,25 @@
             public int GetHeight() => 1080;
         }
 
-        public class UHD_2160 : IStandard
+        public class UHD_2880_2160 : IStandard
+        {
+            // All combinations allowed
+            public string[] GetAllowedFrameRates() => new string[] {
+                "23.976p",
+                "24p",
+                "25p",
+                "29.97p",
+                "30p",
+                "50p",
+                "59.94p",
+                "60p",
+            };
+
+            public int GetWidth() => 2880;
+            public int GetHeight() => 2160;
+        }
+
+        public class UHD_3840_2160 : IStandard
         {
             // All combinations allowed
             public string[] GetAllowedFrameRates() => new string[] {

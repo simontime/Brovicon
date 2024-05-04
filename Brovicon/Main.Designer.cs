@@ -109,6 +109,7 @@
             "1280x720",
             "1440x1080",
             "1920x1080",
+            "2880x2160",
             "3840x2160"});
             this.boxOutputResolution.Location = new System.Drawing.Point(74, 20);
             this.boxOutputResolution.Margin = new System.Windows.Forms.Padding(2);

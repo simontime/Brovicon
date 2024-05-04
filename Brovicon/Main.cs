@@ -204,8 +204,11 @@ namespace Brovicon
                 case 4: // HD 1920x1080
                     videoStandard = new Standards.HD_1920_1080();
                     break;
-                case 5: // UHD 2160 (4K)
-                    videoStandard = new Standards.UHD_2160();
+                case 5: // UHD/4K 2880x2160
+                    videoStandard = new Standards.UHD_2880_2160();
+                    break;
+                case 6: // UHD/4K 3840x2160 (4K)
+                    videoStandard = new Standards.UHD_3840_2160();
                     break;
                 default: // Shouldn't ever be reached, defaults to 1920x1080
                     videoStandard = new Standards.HD_1920_1080();
@@ -323,7 +326,7 @@ namespace Brovicon
                     cropRatio = string2Ratio(boxCrop.Text);
 
                 if (boxStretch.Enabled)
-                    cropRatio = string2Ratio(boxCrop.Text);
+                    stretchRatio = string2Ratio(boxStretch.Text);
 
                 // Dimensions and ratios
                 var originalHeight = videoInformation.Height;
