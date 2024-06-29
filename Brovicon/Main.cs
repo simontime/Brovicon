@@ -1,3 +1,5 @@
+using static Brovicon.Standards;
+
 namespace Brovicon
 {
     public partial class Main : Form
@@ -15,6 +17,9 @@ namespace Brovicon
         {
             // No resize
             boxResizeMode.SelectedIndex = 0;
+
+            // Set FieldOrder enum data source for combo box
+            boxFieldOrder.DataSource = Enum.GetValues(typeof(FieldOrder));
 
             // Ensure dependencies exist
             if (!File.Exists("avs/ffmpeg.exe"))
@@ -82,6 +87,10 @@ namespace Brovicon
         {
             // Unchecks 'Force Progressive' if it is checked
             chkForceProgressive.Checked &= !chkForceInterlaced.Checked;
+
+            // Enables field order selector
+            lblFieldOrder.Enabled = chkForceInterlaced.Checked;
+            boxFieldOrder.Enabled = chkForceInterlaced.Checked;
         }
 
         // Triggered when 'Force Progressive' is toggled
@@ -89,6 +98,10 @@ namespace Brovicon
         {
             // Unchecks 'Force Interlaced' if it is checked
             chkForceInterlaced.Checked &= !chkForceProgressive.Checked;
+
+            // Disables field order selector
+            lblFieldOrder.Enabled = false;
+            boxFieldOrder.Enabled = false;
         }
 
         // Triggered when resize mode is changed
@@ -360,6 +373,12 @@ namespace Brovicon
                 if (chkForceProgressive.Checked)
                     deInterlace = false;
 
+                // Field order
+                var fieldOrder = FieldOrder.Auto;
+
+                if (boxFieldOrder.Enabled)
+                    fieldOrder = (FieldOrder)boxFieldOrder.SelectedItem;
+
                 // Codecs and bit rates
                 var videoCodec   = boxOutputVideoCodec.Text.ToLower();
                 var videoBitRate = 0;
@@ -384,6 +403,7 @@ namespace Brovicon
                 var script = Scripting.GenerateAviSynthScript(
                     inputFilename,
                     deInterlace,
+                    fieldOrder,
                     processNoise,
                     originalHeight,
                     originalRatio,

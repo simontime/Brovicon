@@ -2,6 +2,14 @@
 {
     static class Standards
     {
+        // Interlacing - field dominance
+        public enum FieldOrder
+        {
+            Auto,
+            Upper,
+            Lower
+        }
+
         public class NTSC : IStandard
         {
             // NTSC rates only

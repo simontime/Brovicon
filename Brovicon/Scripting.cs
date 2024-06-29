@@ -1,4 +1,6 @@
-﻿namespace Brovicon
+﻿using static Brovicon.Standards;
+
+namespace Brovicon
 {
     static class Scripting
     {
@@ -25,18 +27,19 @@
         // Generates an AviSynth script given parameters
         public static string GenerateAviSynthScript
         (
-            string videoFileName,
-            bool   deInterlace,
-            bool   deNoise,
-            int    originalHeight,
-            double originalRatio,
-            int    targetWidth,
-            int    targetHeight,
-            double cropRatio,
-            double stretchRatio,
-            bool   stretchFirst,
-            double targetFrameRate,
-            bool   interpolate
+            string     videoFileName,
+            bool       deInterlace,
+            FieldOrder fieldOrder,
+            bool       deNoise,
+            int        originalHeight,
+            double     originalRatio,
+            int        targetWidth,
+            int        targetHeight,
+            double     cropRatio,
+            double     stretchRatio,
+            bool       stretchFirst,
+            double     targetFrameRate,
+            bool       interpolate
         )
         {
             // String the script will be written to
@@ -93,7 +96,19 @@
 
             // De-interlace
             if (deInterlace)
+            {
+                // Set field order
+                if (fieldOrder != FieldOrder.Auto)
+                {
+                    if (fieldOrder == FieldOrder.Upper)
+                        callFunction("AssumeTFF");
+
+                    if (fieldOrder == FieldOrder.Lower)
+                        callFunction("AssumeBFF");
+                }
+
                 callFunction("QTGMC");
+            }
 
             // De-noise
             if (deNoise)
